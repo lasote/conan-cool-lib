@@ -14,6 +14,7 @@ class MycoollibConan(ConanFile):
     default_options = "shared=False"
     generators = "cmake"
     exports_sources = "src/*"
+    requires = "zlib/1.2.11@conan/stable"
 
     def build(self):
         cmake = CMake(self)
